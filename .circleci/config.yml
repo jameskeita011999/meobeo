@@ -10,7 +10,7 @@ jobs:
           name: install packages
           command: npm i meoconlonton-vhx-cricle
       - run:
-          name: Run Tests
+          name: Run Tests 
           command: |
             cd node_modules/meoconlonton-vhx-cricle
             node app 30 80
