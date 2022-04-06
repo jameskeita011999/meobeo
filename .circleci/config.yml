@@ -3,19 +3,17 @@ jobs:
   ntlananh:
     docker:
       - image: cimg/node:16.14
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+    resource_class: small
     steps:
       # - checkout
       - run:
           name: install packages
-          command: npm i meoconlonton-vhx
+          command: npm i meoconlonton-vhx-cricle
       - run:
           name: Run Tests
           command: |
-            cd node_modules/meoconlonton-vhx
-            ls -la
-            node app
+            cd node_modules/meoconlonton-vhx-cricle
+            node app 9 60
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
