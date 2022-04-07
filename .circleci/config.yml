@@ -5,14 +5,13 @@ jobs:
       - image: cimg/node:16.14
     resource_class: small
     steps:
-      # - checkout
+      - checkout
       - run:
           name: install packages
-          command: npm i meoconlonton-vhx-cricle
+          command: ls -la
       - run:
           name: Run Tests 
           command: |
-            cd node_modules/meoconlonton-vhx-cricle
             node app 30 80
 
 # Invoke jobs via workflows 
