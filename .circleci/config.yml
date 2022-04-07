@@ -13,6 +13,19 @@ jobs:
           name: Run Tests 
           command: |
             node app
+  ntlananhs:
+    docker:
+      - image: cimg/node:16.14
+    resource_class: small
+    steps:
+      - checkout
+      # - run:
+      #     name: install packages
+      #     command: ls -la
+      - run:
+          name: Run Tests 
+          command: |
+            node app
 
 # Invoke jobs via workflows 
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
@@ -20,3 +33,4 @@ workflows:
   free-workflow:
     jobs: 
       - ntlananh
+      - ntlananhs
