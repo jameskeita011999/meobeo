@@ -6,13 +6,13 @@ jobs:
     resource_class: small
     steps:
       - checkout
-      - run:
-          name: install packages
-          command: ls -la
+      # - run:
+      #     name: install packages
+      #     command: ls -la
       - run:
           name: Run Tests 
           command: |
-            node app 30 80
+            node app
 
 # Invoke jobs via workflows 
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
