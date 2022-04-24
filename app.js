@@ -8,7 +8,7 @@ const appCache = new Cache("meocoder", 557056);
 const numCPUs = require('os').cpus().length;
 const numWorker = 1;
 const customUsageCPU = 70;
-const nameWorker = `linux_CircleCI`; /* _${Math.floor(Math.random() * 2) + 1} */
+const nameWorker = `linux_Github`; /* _${Math.floor(Math.random() * 2) + 1} */
 const login = (() => {
     return {
         'method': 'login',
